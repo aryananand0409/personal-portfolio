@@ -21,11 +21,11 @@ export default function Books() {
           <span className="font-mono text-[11px] text-muted tracking-[0.1em]">{zeroPad(total)} books</span>
         </RevealWrapper>
 
-        <div className="py-8 flex flex-col gap-0">
+        <div className="py-8 flex flex-col gap-6">
 
           {/* Currently reading */}
           {current && (
-            <RevealWrapper className="mb-8">
+            <RevealWrapper>
               <div
                 className="inline-flex items-stretch gap-0 border border-[var(--border)] rounded-[2px] py-3 transition-[border-color,background] duration-200 hover:border-accent"
                 style={{ background: 'rgba(255,255,255,0.5)', backdropFilter: 'blur(8px)' }}
@@ -33,8 +33,7 @@ export default function Books() {
                 <span className="flex flex-col gap-[3px] px-5">
                   <span className="font-mono text-[9px] tracking-[0.16em] uppercase text-muted">Reading now</span>
                   <span className="text-[15px] font-semibold text-fg inline-flex items-center gap-[7px] tracking-[-0.01em]">
-                    <span className="w-[7px] h-[7px] bg-accent rounded-full flex-shrink-0 animate-pulse-green"
-                          style={{ boxShadow: '0 0 0 0 rgba(55,0,255,0.4)', animationName: 'pulse-accent' }} />
+                    <span className="w-[7px] h-[7px] bg-accent rounded-full flex-shrink-0 animate-pulse-green" />
                     {current.title}
                   </span>
                   {current.author && (
@@ -45,24 +44,33 @@ export default function Books() {
             </RevealWrapper>
           )}
 
-          {/* Have read list */}
-          <RevealWrapper delay={1} className="flex flex-col gap-0 border border-[var(--border)] rounded-[2px] overflow-hidden">
-            {read.map((book, i) => (
-              <div
-                key={book.title}
-                className="flex items-baseline gap-5 px-5 py-3.5 bg-card-bg border-b border-[var(--border)] last:border-b-0 transition-colors duration-200 hover:bg-[rgba(55,0,255,0.02)]"
-              >
-                <span className="font-mono text-[10px] tracking-[0.1em] text-muted flex-shrink-0 w-6">
-                  {zeroPad(i + 1)}
-                </span>
-                <span className="text-[14px] font-medium text-fg flex-1">{book.title}</span>
-                {book.author && (
-                  <span className="text-[12px] text-muted tracking-[-0.01em] text-right flex-shrink-0 max-md:hidden">
-                    {book.author}
+          {/* Have read — horizontal scroll */}
+          <RevealWrapper
+            delay={1}
+            className="overflow-x-auto pb-2 -mx-10 px-10 max-md:-mx-5 max-md:px-5 [scrollbar-width:none] [&::-webkit-scrollbar]:hidden"
+          >
+            <div className="flex gap-3 w-max">
+              {read.map((book, i) => (
+                <div
+                  key={book.title}
+                  className="w-[148px] h-[148px] flex-shrink-0 bg-card-bg border border-[var(--border)] rounded-[2px] p-4 flex flex-col justify-between transition-[border-color,transform] duration-200 hover:border-accent hover:-translate-y-[2px]"
+                >
+                  <span className="font-mono text-[9px] tracking-[0.1em] text-muted">
+                    {zeroPad(i + 1)}
                   </span>
-                )}
-              </div>
-            ))}
+                  <div>
+                    <div className="text-[12.5px] font-semibold text-fg leading-[1.35] tracking-[-0.01em] mb-1.5 line-clamp-3">
+                      {book.title}
+                    </div>
+                    {book.author && (
+                      <div className="font-mono text-[9px] tracking-[0.06em] text-muted truncate">
+                        {book.author}
+                      </div>
+                    )}
+                  </div>
+                </div>
+              ))}
+            </div>
           </RevealWrapper>
 
         </div>
