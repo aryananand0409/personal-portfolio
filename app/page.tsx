@@ -6,6 +6,8 @@ import Projects from './_components/Projects'
 import Analyses from './_components/Analyses'
 import Writing from './_components/Writing'
 import Recognition from './_components/Recognition'
+import Books from './_components/Books'
+import Interests from './_components/Interests'
 import Contact from './_components/Contact'
 import Footer from './_components/Footer'
 import { publishedAnalyses } from '@/data/analyses'
@@ -23,6 +25,8 @@ export default function Page() {
       <Analyses />
       <Writing />
       <Recognition />
+      <Books />
+      <Interests />
       <Contact />
       <Footer />
     </main>

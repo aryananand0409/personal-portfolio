@@ -63,7 +63,7 @@ export default function Hero() {
               {/* Tags */}
               <div className="reveal reveal-delay-3 flex flex-wrap gap-2 mb-10">
                 <span className="inline-flex items-center gap-[5px] bg-accent text-white border border-accent px-3 py-[5px] text-[12px] font-medium tracking-[0.02em] rounded-[2px] before:content-[''] before:w-1.5 before:h-1.5 before:bg-white before:rounded-full before:animate-blink">
-                  Open to the Right Build
+                  Looking for my next challenge
                 </span>
                 {TAGS.map(t => (
                   <span
@@ -98,19 +98,13 @@ export default function Hero() {
           {/* RIGHT */}
           <div className="py-[60px] pl-12 flex flex-col gap-6 justify-between max-md:py-8 max-md:pl-0">
             {/* Photo slot */}
-            <div className="flex-1 bg-[#E8E3DC] rounded-[2px] relative overflow-hidden min-h-[280px] flex items-center justify-center">
-              {/* Drop a headshot.jpg into /public and replace the div below with:
-                  <img src="/headshot.jpg" alt="Aryan Anand" className="w-full h-full object-cover" /> */}
-              <div
-                className="w-full h-full flex flex-col items-center justify-center gap-2 absolute inset-0"
-                style={{
-                  backgroundImage:
-                    'repeating-linear-gradient(-45deg,transparent,transparent 8px,rgba(0,0,0,0.04) 8px,rgba(0,0,0,0.04) 9px)',
-                }}
-              >
-                <span className="font-mono text-[10px] text-[#aaa] tracking-[0.1em]">PHOTO</span>
-                <span className="font-mono text-[10px] text-[#aaa] tracking-[0.1em]">headshot</span>
-              </div>
+            <div className="flex-1 rounded-[2px] relative overflow-hidden min-h-[280px]">
+              {/* eslint-disable-next-line @next/next/no-img-element */}
+              <img
+                src="/portfoliohs.jpeg"
+                alt="Aryan Anand"
+                className="w-full h-full object-cover absolute inset-0"
+              />
             </div>
 
             {/* Stats 2×2 */}
