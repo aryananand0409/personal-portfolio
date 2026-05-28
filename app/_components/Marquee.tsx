@@ -13,13 +13,12 @@ const items = [...KEYWORDS, ...KEYWORDS]
 
 export default function Marquee() {
   return (
-    <div className="bg-fg text-bg py-3.5 overflow-hidden border-b border-[var(--border)] whitespace-nowrap">
-      <div className="inline-flex animate-marquee hover:[animation-play-state:paused]">
+    <div className="bg-fg text-bg py-3.5 overflow-hidden border-b border-[var(--border)] whitespace-nowrap flex items-center">
+      <div className="inline-flex items-center animate-marquee hover:[animation-play-state:paused]">
         {items.map((kw, i) => (
           <span
             key={i}
-            className="inline-flex items-center gap-5 px-8 font-mono text-[11px] tracking-[0.14em] uppercase"
-            style={{ color: 'rgba(232,231,238,0.6)' }}
+            className="inline-flex items-center gap-5 px-8 font-mono text-[11px] tracking-[0.14em] uppercase text-white"
           >
             <span className="w-1 h-1 bg-accent rounded-full flex-shrink-0" />
             {kw}

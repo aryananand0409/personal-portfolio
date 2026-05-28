@@ -2,7 +2,7 @@ import HeroRevealInit from './HeroRevealInit'
 
 const STATS = [
   { num: '7.7M+',  label: 'Members Impacted' },
-  { num: '$1.3M+', label: 'Annual Savings' },
+  { num: '2M+',    label: 'Feature Interactions' },
   { num: '4+',     label: 'AI Products Shipped' },
   { num: '3',      label: 'Product Lines' },
 ]
@@ -11,7 +11,7 @@ const TAGS = ['0→1 Builder', 'AI Products', 'Mobile · B2C · B2B']
 
 export default function Hero() {
   return (
-    <section id="hero" className="pt-16 min-h-screen flex flex-col border-b border-[var(--border)]">
+    <section id="hero" className="pt-16 flex flex-col border-b border-[var(--border)]">
       <HeroRevealInit />
       <div className="max-w-[1160px] mx-auto px-10 w-full flex-1 flex flex-col max-md:px-5">
         <div className="flex-1 grid grid-cols-[1fr_360px] max-md:grid-cols-1 border-t border-[var(--border)]">
@@ -29,10 +29,10 @@ export default function Hero() {
                 className="reveal reveal-delay-1 font-bold leading-[0.92] tracking-[-0.03em] mb-7"
                 style={{ fontSize: 'clamp(56px,7vw,96px)' }}
               >
-                Aryan<br />Anand
+                Aryan Anand
                 <span
-                  className="inline-block w-3 h-3 bg-accent rounded-full ml-1.5 align-middle"
-                  style={{ transform: 'translateY(-8px)' }}
+                  className="inline-block w-3 h-3 bg-accent rounded-full ml-2 align-baseline"
+                  style={{ marginBottom: '6px' }}
                 />
               </h1>
 
