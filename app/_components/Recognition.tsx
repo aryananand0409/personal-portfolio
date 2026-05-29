@@ -99,7 +99,7 @@ export default function Recognition() {
             {CERTS.map(cert => (
               <span
                 key={cert}
-                className="font-mono text-[10px] tracking-[0.08em] uppercase text-muted border border-[var(--border)] px-3 py-1.5 rounded-[2px] transition-[border-color,color] duration-200 hover:border-accent hover:text-accent"
+                className="font-mono text-[10px] tracking-[0.08em] uppercase text-fg border border-[var(--border)] px-3 py-1.5 rounded-[2px] transition-[border-color,color] duration-200 hover:border-accent hover:text-accent"
               >
                 {cert}
               </span>
