@@ -44,46 +44,34 @@ export default function Books() {
             </RevealWrapper>
           )}
 
-          {/* Scroll hint label */}
           <RevealWrapper delay={1} className="flex items-center justify-between">
             <span className="font-mono text-[9px] tracking-[0.12em] uppercase text-muted">Have read</span>
-            <span className="font-mono text-[9px] tracking-[0.1em] text-muted flex items-center gap-1">
-              scroll →
-            </span>
           </RevealWrapper>
 
-          {/* Have read — horizontal scroll with right fade */}
-          <RevealWrapper delay={1} className="relative -mx-10 max-md:-mx-5">
-            {/* Right gradient fade */}
-            <div
-              className="absolute right-0 top-0 bottom-2 w-16 z-10 pointer-events-none"
-              style={{ background: 'linear-gradient(to right, transparent, var(--bg))' }}
-            />
-
-            <div className="overflow-x-auto pb-2 px-10 max-md:px-5 [scrollbar-width:none] [&::-webkit-scrollbar]:hidden">
-              <div className="flex gap-2.5 w-max">
+          {/* Have read — responsive grid (show all books) */}
+          <RevealWrapper delay={1} className="-mx-10 max-md:-mx-5">
+            <div className="px-10 max-md:px-5">
+              <div className="grid gap-3 grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-6">
                 {read.map((book, i) => (
                   <div
                     key={book.title}
-                    className="w-[130px] h-[72px] flex-shrink-0 bg-card-bg border border-[var(--border)] rounded-[2px] px-3 py-2.5 flex flex-col justify-between transition-[border-color,transform] duration-200 hover:border-accent hover:-translate-y-[2px]"
+                    className="bg-card-bg border border-[var(--border)] rounded-[2px] px-3 py-3 flex flex-col justify-between transition-[border-color,transform] duration-200 hover:border-accent hover:-translate-y-[2px]"
                   >
-                    <span className="font-mono text-[8px] tracking-[0.1em] text-muted">
+                    <span className="font-mono text-[9px] tracking-[0.1em] text-muted">
                       {zeroPad(i + 1)}
                     </span>
-                    <div>
-                      <div className="text-[11px] font-semibold text-fg leading-[1.3] tracking-[-0.01em] mb-1 line-clamp-2">
+                    <div className="mt-1">
+                      <div className="text-[13px] font-semibold text-fg leading-[1.25] tracking-[-0.01em] mb-1">
                         {book.title}
                       </div>
                       {book.author && (
-                        <div className="font-mono text-[8px] tracking-[0.04em] text-muted truncate">
+                        <div className="font-mono text-[10px] tracking-[0.04em] text-muted truncate">
                           {book.author}
                         </div>
                       )}
                     </div>
                   </div>
                 ))}
-                {/* Spacer so last card isn't hidden under the fade */}
-                <div className="w-8 flex-shrink-0" />
               </div>
             </div>
           </RevealWrapper>
