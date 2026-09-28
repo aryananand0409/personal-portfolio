@@ -7,6 +7,7 @@ export type Book = {
 export const books: Book[] = [
   // Currently reading
   { title: 'The Will of the Many', author: 'James Islington', status: 'reading' },
+  { title: 'Pachinko', author: 'Min Jin Lee', status: 'reading' },
 
   // Have read
   { title: 'Babel',                              author: 'R.F. Kuang',         status: 'read' },
@@ -20,8 +21,19 @@ export const books: Book[] = [
   { title: 'Butter',                             author: 'Asako Yuzuki',       status: 'read' },
   { title: 'As Long as the Lemon Trees Grow',    author: 'Zoulfa Katouh',      status: 'read' },
   { title: 'Mornings with My Cat Mii',           author: 'Ayano Hana',         status: 'read' },
-  { title: 'Mother Mary Comes to Me',            author: '',                   status: 'read' },
-  { title: 'Hot Chocolate on Thursday',          author: '',                   status: 'read' },
+  { title: 'Mother Mary Comes to Me',            author: 'Arundhati Roy',      status: 'read' },
+  { title: 'Hot Chocolate on Thursday',          author: 'Michiko Aoyoma',     status: 'read' },
+  { title: 'East of Eden',                       author: 'John Steinbeck',     status: 'read' },
+  { title: 'Stranger Houses',                    author: 'Uketsu',    status: 'read' },
+  { title: 'Dungeon Crawler Carl #1',            author: 'Matt Diniman',      status: 'read' },
+  { title: 'Mr. Mercedes',                       author: 'Stephen King',  status: 'read' },
+  { title: 'Project Hail Mary',                  author: 'Andy Weir',  status: 'read' },
+  {title: 'Kane and Abel', author: 'Jeffrey Archer', status: 'read' },
+  {title: 'Intermezzo', author: 'Sally Rooney', status: 'read' },
+  {title: 'There are Rivers in the Sky', author: 'Elif Shafak', status: 'read' },
+  {title: 'The Forty Rules of Love', author: 'Elif Shafak', status: 'read' },
+  {title: 'The Palace of Illusions', author: 'Chitra Banerjee Divakaruni', status: 'read' },
+  {title: 'The Forest of Enchantments', author: 'Chitra Banerjee Divakaruni', status: 'read' },
 ]
 
 export function currentlyReading(): Book | undefined {
