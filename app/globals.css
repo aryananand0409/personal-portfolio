@@ -49,11 +49,11 @@ body {
 /* ── ESSAY READING ── */
 .essay-copy { font-size: 17px; line-height: 1.85; color: #333; }
 .essay-copy p { margin: 0 0 1.5em; }
-.essay-copy h2 { margin: 2.4em 0 0.7em; color: var(--fg); font-size: 1.45em; line-height: 1.2; letter-spacing: -0.03em; font-weight: 700; }
+.essay-copy h2 { clear: both; margin: 2.4em 0 0.7em; color: var(--fg); font-size: 1.45em; line-height: 1.2; letter-spacing: -0.03em; font-weight: 700; }
 .essay-copy blockquote { margin: 2.5em 0; padding: 0.25em 0 0.25em 1.25em; border-left: 2px solid var(--accent); color: var(--fg); font-size: 1.2em; line-height: 1.55; }
 .essay-copy blockquote p { margin-bottom: 0.5em; }
 .essay-copy cite { color: var(--muted); font: 11px var(--mono); font-style: normal; letter-spacing: 0.06em; }
-.essay-image { margin: 2.5em 0; }
-.essay-image img { display: block; width: 100%; height: auto; }
+.essay-image { float: right; width: 42%; margin: 0.35em 0 1.25em 1.5em; }
+.essay-image img { display: block; width: 100%; max-height: 320px; object-fit: contain; }
 .essay-image figcaption { margin-top: 0.75em; color: var(--muted); font: 11px var(--mono); letter-spacing: 0.04em; }
-@media (max-width: 640px) { .essay-copy { font-size: 16px; } }
+@media (max-width: 640px) { .essay-copy { font-size: 16px; } .essay-image { width: 44%; margin-left: 1em; } .essay-image img { max-height: 260px; } }
