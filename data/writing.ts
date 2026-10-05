@@ -61,7 +61,7 @@ export const essays: Essay[] = [
       },
       {
         "type": "paragraph",
-        "text": "I've finished 7 so far, and somewhere along the way, Fable became much more than a place where I kept a list of books."
+        "text": "I've finished 19 so far, and somewhere along the way, Fable became much more than a place where I kept a list of books."
       },
       {
         "type": "heading",
